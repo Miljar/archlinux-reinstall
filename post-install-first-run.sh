@@ -11,14 +11,14 @@ if which virtualbox > /dev/null 2>&1; then
     groups="$groups,vboxusers"
 fi
 
-useradd -U -m -c 'Ike Devolder' -s /usr/bin/zsh -G "$groups" ike
-echo "ike:123456" | chpasswd
-chage -d 0 ike
+useradd -U -m -c 'Tom Van Herreweghe' -s /usr/bin/zsh -G "$groups" tom
+echo "tom:123456" | chpasswd
+chage -d 0 tom
 
 timedatectl set-ntp 1
 
 usbguard generate-policy > /etc/usbguard/rules.conf
-sed -e 's#^\(IPCAllowedUsers=\).*#\1root ike#' \
+sed -e 's#^\(IPCAllowedUsers=\).*#\1root tom#' \
     -i /etc/usbguard/usbguard-daemon.conf
 
 # btrfs related
