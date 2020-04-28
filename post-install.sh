@@ -7,10 +7,10 @@ echo -n "give your full name: "
 read fullname
 
 if [[ -z name ]]; then
-    name=ike
+    name=tom
 fi
 if [[ -z $fullname ]]; then
-    fullname="Ike Devolder"
+    fullname="Tom Van Herreweghe"
 fi
 
 # groups

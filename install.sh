@@ -214,8 +214,8 @@ echo "LANG=en_US.UTF-8" > /mnt/etc/locale.conf
 echo "KEYMAP=be-latin1" > /mnt/etc/vconsole.conf
 
 # set hostname
-echo "archlinux-$randstring" > /mnt/etc/hostname
-echo "127.0.1.1 archlinux-$randstring" >> /mnt/etc/hosts
+echo "bender" > /mnt/etc/hostname
+echo "127.0.1.1 bender" >> /mnt/etc/hosts
 
 # make sure firewalld uses iptables
 if [[ -e /mnt/etc/firewalld/firewalld.conf ]]; then
